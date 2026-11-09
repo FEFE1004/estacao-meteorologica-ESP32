@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Meteorológico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="card-esqueda">
+            <div class="bloco-topo-horizontal">
+                <div class="bloco-temperatura-container">
+                    <h1 class="temp-atual">--</h1>
+                    <span class="unidade-ativa">°C</span>
+                </div>
+                
+                <div class="infos-ao-lado">
+                    <div class="botoes-temp">
+                        <button class="c selecionado">°C</button> <span>|</span>
+                        <button class="f">°F</button>
+                    </div>
+                    <div class="detalhes-extras">
+                        <span>Umidade: <span class="umidade">--</span>%</span>
+                        <span>Pressão: <span class="pressao">--</span> hPa</span>
+                        <span>Luminosidade: <span class="luminosidade">--</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-direita">
+            <h2>Estação Meteorológica ESP32</h2>
+            <p class="data-atual"></p>
+            <p class="hora-atual"></p>
+        </div>
+    </header>
+    
+    <main>
+        <div class="chart">
+            <h3>Tendências Meteorológicas</h3>
+            <div style="position: relative; height: 200px; width: 100%;">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+
+        <div class="leituras">
+            <p>Leituras Recentes</p>
+            <div class="max">
+                <p>Temperatura Máxima</p>
+                <p class="t-max">--</p>
+            </div>
+            <div class="min">
+                <p>Temperatura Mínima</p>
+                <p class="t-min">--</p>
+            </div>
+            <div class="umi">
+                <p>Umidade Média</p>
+                <p class="u-media">--</p>
+            </div>
+            <div class="luz">
+                <p>Luminosidade</p>
+                <p class="l-atual">--</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Última atualização: <span class="atualizacao">--:--</span> | Dados em tempo real</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
