@@ -81,5 +81,3 @@ Site
 3. O computador precisa estar na mesma rede do ESP32.
 
 Para testar se o ESP32 está funcionando, abra `http://<IP_DO_ESP32>/dados` no navegador.
-
-![Dashboard](docs/dashboard.png)
